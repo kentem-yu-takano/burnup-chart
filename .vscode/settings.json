@@ -1,0 +1,12 @@
+{
+  "eslint.validate": ["typescript", "typescriptreact"],
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": ["source.organizeImports", "source.fixAll.eslint"],
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "eslint.nodeEnv": ""
+}
