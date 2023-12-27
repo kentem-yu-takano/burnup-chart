@@ -1,6 +1,7 @@
 'use client'
 
 import Chart from '@/components/Chart'
+import MockCode from '@/components/MockCode'
 import Reader from '@/components/Reader'
 import Table from '@/components/Table'
 import { ChartData, InputData } from '@/types/ChartData'
@@ -84,7 +85,10 @@ export default function Home() {
     <main className='flex min-h-screen flex-col items-center p-4'>
       <p className='font-bold text-4xl my-5'>リリース速度チャート</p>
       {displayList.length === 0 ? (
-        <Reader setArrayData={setArrayData} />
+        <>
+          <Reader setArrayData={setArrayData} />
+          <MockCode />
+        </>
       ) : (
         <div className='flex flex-grow w-full'>
           <div className='flex min-w-0'>
