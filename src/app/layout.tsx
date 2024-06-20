@@ -1,12 +1,6 @@
-import '@/styles/globals.css'
+import NextAuthProvider from '@/providers/NextAuth'
 import type { Metadata } from 'next'
-import { M_PLUS_Rounded_1c } from 'next/font/google'
-
-const mPlus = M_PLUS_Rounded_1c({
-  weight: ['400', '700'],
-  display: 'swap',
-  preload: false,
-})
+import './globals.css'
 
 export const metadata: Metadata = {
   title: 'リリース速度チャート',
@@ -14,8 +8,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='ja' data-theme='pastel'>
-      <body className={`${mPlus.className} bg-base-100 overflow-auto min-w-[900px]`}>{children}</body>
+    <html lang='ja' data-theme='cupcake'>
+      <body className={`bg-base-100 overflow-auto min-w-[900px] text-base-content font-sans`}>
+        <NextAuthProvider>
+          <main className='flex min-h-screen flex-col items-center p-4'>{children}</main>
+        </NextAuthProvider>
+      </body>
     </html>
   )
 }

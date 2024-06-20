@@ -29,3 +29,6 @@ export type InputData = {
   done?: number
   all: number
 }
+
+// メモ
+// 総数がいつ変わったかわかるか・・？実行時に総数を取得して、csvに書き出していく？
