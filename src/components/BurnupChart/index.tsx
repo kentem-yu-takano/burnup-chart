@@ -13,9 +13,13 @@ const BurnupChart: React.FC<Props> = ({ client, projectNo, axisX, axisY }) => {
   const { data } = useGetIssues(client, projectNo)
   console.log(data)
   return (
-    <div>
-      X軸：{axisX?.name}
-      Y軸：{axisY?.name}
+    <div className='flex flex-col'>
+      <div>
+        X軸：{axisX?.name}
+        Y軸：{axisY?.name}
+      </div>
+      <div>↓↓↓↓↓↓ここにグラフを表示したかった。。。。。。。。。↓↓↓↓↓↓↓</div>
+      <div>{JSON.stringify(data)}</div>
     </div>
   )
 }

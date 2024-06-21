@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className='flex flex-grow w-full justify-center p-6'>
+      <div className='flex flex-col flex-grow w-full justify-center p-6'>
         {client && !projectNo && <ProjectList client={client} setProjectNo={setProjectNo} />}
         {client && projectNo && (
           <CustomFieldList client={client} projectNo={projectNo} setAxisX={setAxisX} setAxisY={setAxisY} />
